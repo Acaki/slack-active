@@ -1,0 +1,12 @@
+[Unit]
+Description=Keep slack active
+After=graphical.target
+
+[Service]
+Type=simple
+Environment="DISPLAY=:0"
+Environment=XAUTHORITY=%h/.Xauthority
+ExecStart=/bin/python /home/your/path/to/main.py
+
+[Install]
+WantedBy=default.target
